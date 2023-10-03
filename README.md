@@ -1,9 +1,7 @@
 # Latest Update 10/2/23
 The Repo has been moved from "code.statera" to "chitalu.am" repo for portfolio. 
-Currently working with a MongoB tutorial that builds a full stack app with MEAN. 
-Link to tutorial is: https://www.mongodb.com/languages/mean-stack-tutorial
+Currently working on route guards and navigation from different pages in the application.
 
-Currently working on building interfaces for computers and printers on the server side.
 
 # Project-Zassests-v1
 Project Zassets repository.
@@ -31,3 +29,12 @@ To run the application, follow these stesp:
     Next run the client side using the commmand:
         "ng serve -o"
     which will open on http://localhost:4200
+
+
+
+
+# OLD RECORDS 
+# Currently working with a MongoB tutorial that builds a full stack app with MEAN. 
+# Link to tutorial is: https://www.mongodb.com/languages/mean-stack-tutorial
+
+# Currently working on building interfaces for computers and printers on the server side.

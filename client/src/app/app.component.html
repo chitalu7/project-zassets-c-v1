@@ -69,13 +69,9 @@
     </mat-drawer>
 
 
-  <!-- <mat-drawer-content>
-    <div style="text-align:center; min-height:600px">
-      <router-outlet></router-outlet>
-    </div>
-</mat-drawer-content> -->
-
 </mat-drawer-container>
+
+
 </ng-container>
 
 
@@ -96,6 +92,9 @@
   <mat-drawer-content>
     <div style="text-align:center; min-height:600px">
       <router-outlet></router-outlet>
+      <div class="footer">
+        I am a footer
+      </div>
     </div>
 </mat-drawer-content>
 
@@ -170,8 +169,8 @@
   
 <!--     <ng-container *ngIf="(authService.currentUser$ | async ) as user;">
  -->  
-    <mat-drawer-container autosize>
-       <mat-drawer #sidenav opened="true" mode="side">
+    <mat-drawer-container autosize class="mat-drawer-custom">
+       <mat-drawer #sidenav opened="true" mode="side" >
         <mat-nav-list>
           <mat-list-item>
             <button mat-button><mat-icon>dashboard</mat-icon> Dashboard</button>
@@ -186,36 +185,17 @@
     <mat-drawer-content>
       <div style="text-align:center; min-height:600px">
         <router-outlet></router-outlet>
+
+        <div class="footer">
+          I am a footer
+        </div>
       </div>
+
+      
   </mat-drawer-content>
   
   </mat-drawer-container>
-<!--   </ng-container>
- -->  
-  
-  
-<!--     <mat-drawer-container autosize>
-       <mat-drawer #sidenav opened="false" mode="side">
-        <mat-nav-list>
-          <mat-list-item>
-            <button mat-button><mat-icon>dashboard</mat-icon> Dashboard</button>
-          </mat-list-item>
-          <mat-list-item>
-            <button mat-button><mat-icon>assignment</mat-icon>Inventory</button>
-          </mat-list-item>
-      </mat-nav-list>
-      </mat-drawer>
-  
-  
-    <mat-drawer-content>
-      <div style="text-align:center; min-height:600px">
-        <router-outlet></router-outlet>
-      </div>
-  </mat-drawer-content>
-  
-  </mat-drawer-container> -->
-  
-    
+
   
   
     <mat-menu #userMenu="matMenu">
@@ -223,6 +203,17 @@
     </mat-menu>
     
   </ng-container>
+
+
+  <div class="footer">
+    I am a footer
+  </div>
+
+
+
+
+
+
 
 <!-- 
   <div class="content" style="text-align:center; min-height:600px">
@@ -249,3 +240,37 @@
 
 
   
+<!--   </ng-container>
+ -->  
+  
+  
+<!--     <mat-drawer-container autosize>
+       <mat-drawer #sidenav opened="false" mode="side">
+        <mat-nav-list>
+          <mat-list-item>
+            <button mat-button><mat-icon>dashboard</mat-icon> Dashboard</button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button><mat-icon>assignment</mat-icon>Inventory</button>
+          </mat-list-item>
+      </mat-nav-list>
+      </mat-drawer>
+  
+  
+    <mat-drawer-content>
+      <div style="text-align:center; min-height:600px">
+        <router-outlet></router-outlet>
+      </div>
+  </mat-drawer-content>
+  
+  </mat-drawer-container> -->
+  
+    
+
+  
+
+  <!-- <mat-drawer-content>
+    <div style="text-align:center; min-height:600px">
+      <router-outlet></router-outlet>
+    </div>
+</mat-drawer-content> -->
