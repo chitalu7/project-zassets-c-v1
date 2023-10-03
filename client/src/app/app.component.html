@@ -1,0 +1,276 @@
+<ng-container *ngIf="!(authService.currentUser$ | async ) as user;">
+<mat-toolbar color="primary">
+
+  <ng-container *ngIf="(authService.currentUser$ | async ) as user;">
+
+    <button mat-icon-button (click)="sidenav.toggle();">
+      <mat-icon class="menu-icon" >menu</mat-icon>
+      Menu
+    </button>  
+    
+  </ng-container>
+
+  <ng-container *ngIf="!(authService.currentUser$ | async ) as user;">     
+    
+  </ng-container>
+
+    <span class="app-name" routerLink="landing">    
+
+      <img src="./assets/images/logo_160.png" class="logo" />
+      Project Zassets
+    </span> 
+
+      <ng-container *ngIf="(authService.currentUser$ | async) as user; else loginButton ">
+        <!-- PREVIOUS WORKING LOGOUT-->
+        <!-- <button mat-button (click)="logout()">
+          <mat-icon>logout</mat-icon>
+          logout
+        </button> -->
+        
+        <button mat-button [mat-menu-trigger-for]="userMenu">
+          
+          <mat-icon>account_circle</mat-icon>
+          
+          {{ user.email}}
+
+          <mat-icon>expand_more</mat-icon>
+          
+        </button>
+
+      </ng-container>
+
+      <ng-template #loginButton>
+        <button mat-button routerLink="login">
+          <mat-icon>login</mat-icon>
+          Login
+        </button>
+
+      </ng-template>
+
+    <!-- <button mat-button routerLink="signup">
+      <mat-icon>login</mat-icon>
+      DEV Sign Up
+    </button> -->
+
+  </mat-toolbar>
+
+  <ng-container *ngIf="(authService.currentUser$ | async ) as user;">
+
+  <mat-drawer-container autosize>
+     <mat-drawer #sidenav opened="true" mode="side">
+      <mat-nav-list>
+        <mat-list-item>
+          <button mat-button><mat-icon>dashboard</mat-icon> Dashboard</button>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-button><mat-icon>assignment</mat-icon>Inventory</button>
+        </mat-list-item>
+    </mat-nav-list>
+    </mat-drawer>
+
+
+</mat-drawer-container>
+
+
+</ng-container>
+
+
+
+  <mat-drawer-container autosize>
+     <mat-drawer #sidenav opened="false" mode="side">
+      <mat-nav-list>
+        <mat-list-item>
+          <button mat-button><mat-icon>dashboard</mat-icon> Dashboard</button>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-button><mat-icon>assignment</mat-icon>Inventory</button>
+        </mat-list-item>
+    </mat-nav-list>
+    </mat-drawer>
+
+
+  <mat-drawer-content>
+    <div style="text-align:center; min-height:600px">
+      <router-outlet></router-outlet>
+      <div class="footer">
+        I am a footer
+      </div>
+    </div>
+</mat-drawer-content>
+
+</mat-drawer-container>
+
+  
+
+
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item (click)="logout()">Logout</button>
+  </mat-menu>
+  
+</ng-container>
+
+
+
+<ng-container *ngIf="(authService.currentUser$ | async ) as user;">
+  <mat-toolbar color="primary">
+  
+    <ng-container *ngIf="(authService.currentUser$ | async ) as user;">
+  
+      <button mat-icon-button (click)="sidenav.toggle();">
+        <mat-icon class="menu-icon" >menu</mat-icon>
+        Menu
+      </button>  
+      
+    </ng-container>
+  
+  <!--   <ng-container *ngIf="!(authService.currentUser$ | async ) as user;">     
+      
+    </ng-container> -->
+  
+      <span class="app-name" routerLink="landing">    
+  
+        <img src="./assets/images/logo_160.png" class="logo" />
+        Project Zassets
+      </span> 
+  
+        <ng-container *ngIf="(authService.currentUser$ | async) as user; else loginButton ">
+          <!-- PREVIOUS WORKING LOGOUT-->
+          <!-- <button mat-button (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            logout
+          </button> -->
+          
+          <button mat-button [mat-menu-trigger-for]="userMenu">
+            
+            <mat-icon>account_circle</mat-icon>
+            
+            {{ user.email}}
+  
+            <mat-icon>expand_more</mat-icon>
+            
+          </button>
+  
+        </ng-container>
+  
+        <ng-template #loginButton>
+          <button mat-button routerLink="login">
+            <mat-icon>login</mat-icon>
+            Login
+          </button>
+  
+        </ng-template>
+  
+      <!-- <button mat-button routerLink="signup">
+        <mat-icon>login</mat-icon>
+        DEV Sign Up
+      </button> -->
+  
+    </mat-toolbar>
+  
+<!--     <ng-container *ngIf="(authService.currentUser$ | async ) as user;">
+ -->  
+    <mat-drawer-container autosize class="mat-drawer-custom">
+       <mat-drawer #sidenav opened="true" mode="side" >
+        <mat-nav-list>
+          <mat-list-item>
+            <button mat-button><mat-icon>dashboard</mat-icon> Dashboard</button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button><mat-icon>assignment</mat-icon>Inventory</button>
+          </mat-list-item>
+      </mat-nav-list>
+      </mat-drawer>
+  
+  
+    <mat-drawer-content>
+      <div style="text-align:center; min-height:600px">
+        <router-outlet></router-outlet>
+
+        <div class="footer">
+          I am a footer
+        </div>
+      </div>
+
+      
+  </mat-drawer-content>
+  
+  </mat-drawer-container>
+
+  
+  
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item (click)="logout()">Logout</button>
+    </mat-menu>
+    
+  </ng-container>
+
+
+  <div class="footer">
+    I am a footer
+  </div>
+
+
+
+
+
+
+
+<!-- 
+  <div class="content" style="text-align:center; min-height:600px">
+    <router-outlet></router-outlet>
+  </div> -->
+  
+
+
+    
+    <!-- <mat-sidenav-content>
+        <div style="height: 88vh">
+        <router-outlet></router-outlet>
+    </div>
+    </mat-sidenav-content> -->
+
+    
+    
+
+   <!--  <mat-sidenav-content>
+        <div style="height: 100%">
+        <router-outlet></router-outlet>
+    </div>
+    </mat-sidenav-content> -->
+
+
+  
+<!--   </ng-container>
+ -->  
+  
+  
+<!--     <mat-drawer-container autosize>
+       <mat-drawer #sidenav opened="false" mode="side">
+        <mat-nav-list>
+          <mat-list-item>
+            <button mat-button><mat-icon>dashboard</mat-icon> Dashboard</button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button><mat-icon>assignment</mat-icon>Inventory</button>
+          </mat-list-item>
+      </mat-nav-list>
+      </mat-drawer>
+  
+  
+    <mat-drawer-content>
+      <div style="text-align:center; min-height:600px">
+        <router-outlet></router-outlet>
+      </div>
+  </mat-drawer-content>
+  
+  </mat-drawer-container> -->
+  
+    
+
+  
+
+  <!-- <mat-drawer-content>
+    <div style="text-align:center; min-height:600px">
+      <router-outlet></router-outlet>
+    </div>
+</mat-drawer-content> -->
