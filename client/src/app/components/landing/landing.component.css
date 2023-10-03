@@ -1,0 +1,10 @@
+/* Custom typography */
+
+.custom-header {
+    /*@include mat-typography-level(200px, 96px, 800px);*/
+    font-size: 30px;
+    font-family: "My custom font", sans-serif;
+    color: #000;
+    width: 50%;
+    margin: 0 auto;
+}
