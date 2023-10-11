@@ -20,6 +20,8 @@ To run the application, follow these stesp:
         npm install
         AND 
         "ng add @angular/material"
+        AND
+        "ng add @angular/flex-layout" [DEPRECATED]
 3.  Be sure to have the username and password for the database in the connection string for the dotenv file which is not included in the repo for 
     security reasons.
 4.  Currently, to run the app, first run the server side using the command: 
