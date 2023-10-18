@@ -7,9 +7,6 @@ Next sprint feature add-ons and tasks:
 2. Display asset count on dashboard
 3. Revise "Add New Asset" functionality.
 
-
-# Test push to remote repo
-
 # HOW TO RUN THE APPLICATION
 To run the application, follow these stesp: 
 1.  Clone the repo, navigate into the "server" directory and install Node dependencies using the command:
@@ -37,6 +34,6 @@ To run the application, follow these stesp:
 
 
 # UpdateS 10/2/23
-# The Repo has been moved from "code.statera" to "chitalu.am" repo for portfolio. 
-# Currently working on route guards and navigation from different pages in the application.
+The Repo has been moved from "code.statera" to "chitalu.am" repo for portfolio. 
+Currently working on route guards and navigation from different pages in the application.
 
