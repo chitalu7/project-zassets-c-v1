@@ -12,16 +12,18 @@ import { redirectUnauthorizedTo, redirectLoggedInTo, AuthGuard, canActivate } fr
 
 const redirectToLoginPage = () => redirectUnauthorizedTo(['login']);
 const redirectToHomePage = () => redirectLoggedInTo(['home']);
+const redirectToComputers = () => redirectLoggedInTo(['computers']);
 
 const routes: Routes = [
   //{ path: '', redirectTo: 'computers', pathMatch: 'full'},
   //{ path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '', redirectTo: 'landing', pathMatch: 'full' },
-  { path: 'landing', component: LandingComponent },
+  { path: 'landing', component: LandingComponent, ...canActivate(redirectToHomePage) },
   { path: 'home', component: HomeComponent, ...canActivate(redirectToLoginPage) },
   { path: 'login', component: LogInComponent, ...canActivate (redirectToHomePage) },
   { path: 'signup', component: SignUpComponent, ...canActivate (redirectToHomePage) },
   { path: 'computers', component: ComputersListComponent, ...canActivate (redirectToLoginPage) },
+  { path: 'computers', component: ComputersListComponent },
   { path: 'computers/new', component: AddComputerComponent }, // <== NEWLY ADDED LINE
   { path: 'computers/edit/:id', component: EditComputerComponent } // <== NEWLY ADDED LINE
 ];

@@ -60,10 +60,10 @@
      <mat-drawer #sidenav opened="true" mode="side">
       <mat-nav-list>
         <mat-list-item>
-          <button mat-button><mat-icon>dashboard</mat-icon> Dashboard</button>
+          <button mat-button (click)="navToDashboard()"><mat-icon>dashboard</mat-icon> Dashboard</button>
         </mat-list-item>
         <mat-list-item>
-          <button mat-button><mat-icon>assignment</mat-icon>Inventory</button>
+          <button mat-button (click)="navToComputers()"><mat-icon>assignment</mat-icon>Inventory</button>
         </mat-list-item>
     </mat-nav-list>
     </mat-drawer>
@@ -80,10 +80,10 @@
      <mat-drawer #sidenav opened="false" mode="side">
       <mat-nav-list>
         <mat-list-item>
-          <button mat-button><mat-icon>dashboard</mat-icon> Dashboard</button>
+          <button mat-button (click)="navToDashboard()" ><mat-icon>dashboard</mat-icon> Dashboard</button>
         </mat-list-item>
         <mat-list-item>
-          <button mat-button><mat-icon>assignment</mat-icon>Inventory</button>
+          <button mat-button (click)="navToComputers()"><mat-icon>assignment</mat-icon>Inventory</button>
         </mat-list-item>
     </mat-nav-list>
     </mat-drawer>
@@ -173,10 +173,10 @@
        <mat-drawer #sidenav opened="true" mode="side" >
         <mat-nav-list>
           <mat-list-item>
-            <button mat-button><mat-icon>dashboard</mat-icon> Dashboard</button>
+            <button mat-button (click)="navToDashboard()"><mat-icon>dashboard</mat-icon> Dashboard</button>
           </mat-list-item>
           <mat-list-item>
-            <button mat-button><mat-icon>assignment</mat-icon>Inventory</button>
+            <button mat-button (click)="navToComputers()"><mat-icon>assignment</mat-icon>Inventory</button>
           </mat-list-item>
       </mat-nav-list>
       </mat-drawer>

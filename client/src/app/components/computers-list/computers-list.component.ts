@@ -6,7 +6,7 @@ import { ComputerService } from 'src/services/computer.service';
 @Component({
   selector: 'app-computers-list',
   template: `
-    <h2 class="text center m-5"> Computer List</h2>
+    <h2 class="text center m-5"> Asset List</h2>
     <table class="table table-striped table-bordered">
       <thead>
         <tr>
@@ -35,7 +35,7 @@ import { ComputerService } from 'src/services/computer.service';
       </tbody>
     </table>
 
-    <button class="btn btn-primary mt-3" routerLink="/computers/new">Add a New Computer</button>
+    <button class="btn btn-primary mt-3" routerLink="/computers/new">Add a New Asset</button>
      `
 })
 export class ComputersListComponent implements OnInit {
