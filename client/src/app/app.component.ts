@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, signal} from '@angular/core';
 import { AuthenticationService } from './services/authentication.service';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,9 @@ import { Router } from '@angular/router';
 
 })
 export class AppComponent {
+
+  
+
 
   constructor(public authService: AuthenticationService, private router: Router){
 
@@ -23,10 +27,16 @@ export class AppComponent {
     this.authService.logout().subscribe(() => {
 
       this.router.navigate(['']);
-      
-
 
     });
+  }
+
+  navToDashboard(){
+    this.router.navigate(['home']);
+  }
+
+  navToComputers(){
+    this.router.navigate(['/computers']);
   }
 
  }

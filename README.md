@@ -1,10 +1,12 @@
-# Latest Update 10/2/23
-The Repo has been moved from "code.statera" to "chitalu.am" repo for portfolio. 
-Currently working on route guards and navigation from different pages in the application.
-
-
-# Project-Zassests-v1
+# Project-Zassets-C-v1.0
 Project Zassets repository.
+
+# Latest Update 10/18/23
+Next sprint feature add-ons and tasks:
+1. Asset type for assets saved to DB.
+2. Display asset count on dashboard
+3. Revise "Add New Asset" functionality.
+
 
 # Test push to remote repo
 
@@ -20,6 +22,7 @@ To run the application, follow these stesp:
         npm install
         AND 
         "ng add @angular/material"
+       
 3.  Be sure to have the username and password for the database in the connection string for the dotenv file which is not included in the repo for 
     security reasons.
 4.  Currently, to run the app, first run the server side using the command: 
@@ -33,8 +36,7 @@ To run the application, follow these stesp:
 
 
 
-# OLD RECORDS 
-# Currently working with a MongoB tutorial that builds a full stack app with MEAN. 
-# Link to tutorial is: https://www.mongodb.com/languages/mean-stack-tutorial
+# UpdateS 10/2/23
+# The Repo has been moved from "code.statera" to "chitalu.am" repo for portfolio. 
+# Currently working on route guards and navigation from different pages in the application.
 
-# Currently working on building interfaces for computers and printers on the server side.
