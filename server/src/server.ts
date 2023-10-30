@@ -8,13 +8,16 @@ import { computerRouter } from "./computers/computer.routes";
 // where the ATLAS_URI is configured
 dotenv.config();
 
+//Uses the ".env" file to access the DB
 const { ATLAS_URI } = process.env;
 
+// Checks that the ".env" file is configured. 
 if (!ATLAS_URI) {
     console.error("No ATLAS_URI environment variable has been defined in the config.env");
     process.exit(1);
 }
 
+// Connects to DB listening on Port 5200
 connectToDatabase(ATLAS_URI)
     .then(() => {
         const app = express();

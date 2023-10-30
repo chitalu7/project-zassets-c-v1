@@ -5,6 +5,7 @@ export const collections: {
     computers? : mongodb.Collection<Computer>;
 } = {};
 
+// Use provided URI to connect to DB
 export async function connectToDatabase(uri: string) {
     const client = new mongodb.MongoClient(uri);
     await client.connect();
