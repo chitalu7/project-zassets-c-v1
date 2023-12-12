@@ -8,7 +8,7 @@ import { computerRouter } from "./computers/computer.routes";
 // where the ATLAS_URI is configured
 dotenv.config();
 
-//Uses the ".env" file to access the DB
+// Uses the ".env" file to access the DB
 const { ATLAS_URI } = process.env;
 
 // Checks that the ".env" file is configured. 
@@ -28,7 +28,7 @@ connectToDatabase(ATLAS_URI)
 
 
         app.listen(5200, () => {
-            console.log(`Server running at http://localhost:5200..`);
+            console.log(`Sucessfully connected to database! Server running at http://localhost:5200..`);
         });
     })
     .catch(error => console.error(error));

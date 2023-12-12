@@ -10,6 +10,7 @@ import { ComputerService } from 'src/services/computer.service';
     <table class="table table-striped table-bordered">
       <thead>
         <tr>
+          <th>Asset Type</th>
           <th>Name</th>
           <th>Serial</th>
           <th>Manufacturer</th>
@@ -21,6 +22,7 @@ import { ComputerService } from 'src/services/computer.service';
 
       <tbody>
         <tr *ngFor="let computer of computers$ | async">
+          <td>{{computer.type}}</td>
           <td>{{computer.name}}</td>
           <td>{{computer.serial}}</td>
           <td>{{computer.manufacturer}}</td>
@@ -38,6 +40,7 @@ import { ComputerService } from 'src/services/computer.service';
     <button class="btn btn-primary mt-3" routerLink="/computers/new">Add a New Asset</button>
      `
 })
+
 export class ComputersListComponent implements OnInit {
   computers$: Observable<Computer[]> = new Observable();
 
