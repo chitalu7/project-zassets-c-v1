@@ -52,26 +52,4 @@ export class LogInComponent implements OnInit {
 
 }
 
-// PREVIOUS TOASTR AUTHENTICATION CODE
 
- /* this.authService.login(email, password).subscribe(()=>{
-      if (this.loginForm.valid && email && password) {
-        this.toastr.success('Logged in successfully', 'All set!');
-        this.router.navigate(['/home']);
-      }else{
-        this.toastr.error('Please check username or password','Authentication Faied!');
-        this.router.navigate(['/login']);
-      }
-    }) */
-    
-
-    /* this.authService.login(email, password)
-    .pipe(
-      this.toastr.toastrConfig({
-        success: 'Logged in successfully',
-        loading: 'Authenticating...',
-        error: 'Error - Authentication Failed. Check username and password'
-      })
-    ).subscribe(() => {
-      this.router.navigate(['/home']);
-    }); */

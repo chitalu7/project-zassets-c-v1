@@ -62,7 +62,6 @@ export class SignUpComponent {
  
   }
   
-
   ngOnInit(): void{  }
 
   get name() {
@@ -85,29 +84,3 @@ export class SignUpComponent {
 }
 
 
-
-
-    /* this.authService
-    .signUp(email, password)
-    .pipe(
-      switchMap(({ user: { uid } }) => 
-      this.userService.addUser({ uid, email, displayName: name })
-      ), 
-      this.toast.observe({
-        success:'Successfully signed up!', 
-        loading: 'Completing sign up...', 
-        error: ({ message }) => `${message}`,
-      })
-    )
-    .subscribe(() => {
-      this.router.navigate(['/home']);
-    }) */
-
-
-    /* this.authService.signUp(email, password)
-    .then(result => {
-      console.log('Signed up successfully!', result);
-    })
-    .catch(error => {
-      console.error("Error during sign up: ", error);
-    }); */

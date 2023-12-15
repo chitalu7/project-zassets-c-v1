@@ -1,21 +1,24 @@
 <mat-toolbar class="card-toolbar" color="secondary"> Dashboard </mat-toolbar>
 <div class="container responsive-grid">
-    <mat-card *ngFor="let card of cards()">
-        <mat-card-header>
-            <mat-card-title> {{ card.title }}</mat-card-title>
-        </mat-card-header>
-        <br/>
-        <img mat-card-image [src]="card.imageSrc" />
-        <mat-card-content>
+ 
+
+        <mat-card *ngFor="let card of cards">
+            <mat-card-header>
+                <mat-card-title> {{ card.title  }} </mat-card-title>
+            </mat-card-header>
             <br/>
-            <h3>
-                {{ card.description }}
-            </h3>
-        </mat-card-content>
-
-        <mat-card-actions>
-            <button mat-button>View</button>
-        </mat-card-actions>
-
-    </mat-card>
+            <img mat-card-image [src]="card.imageSrc" />
+            <mat-card-content>
+                <br/>
+                <h3>
+                    {{ card.description }}
+                </h3>
+            </mat-card-content>
+    
+            <mat-card-actions>
+                <button mat-button>View</button>
+            </mat-card-actions>
+    
+        </mat-card>
+   
 </div>

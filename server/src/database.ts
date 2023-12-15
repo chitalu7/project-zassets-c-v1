@@ -27,10 +27,17 @@ async function applySchemaValidation(db: mongodb.Db) {
     const jsonSchema = {
         $jsonSchema: {
             bsonType: "object",
-            required: ["name", "serial", "manufacturer", "model", "ram", "location"],
+            required: ["type", "name", "serial", "manufacturer", "model", "ram", "location"],
             additionalProperties: false,
             properties: {
                 _id: {},
+
+                type: {
+                    bsonType: "string", 
+                    description: "'asset type' is required and is one of 'Computer', 'Printer' or 'Phone'",
+                    enum: [ "Computer", "Printer", "Phone" ],
+
+                },
 
                 name: {
                     bsonType: "string",
@@ -59,8 +66,8 @@ async function applySchemaValidation(db: mongodb.Db) {
 
                 location: {
                     bsonType: "string",
-                    description: "'location' is required and is one of 'mailroom', 'admin', or 'client'",
-                    enum: ["mailroom", "admin", "client"],
+                    description: "'location' is required and is one of 'Mailroom', 'Admin', or 'Client'",
+                    enum: ["Mailroom", "Admin", "Client"],
                 },
             },
         },

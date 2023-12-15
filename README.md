@@ -20,17 +20,21 @@ To run the application, follow these stesp:
         AND 
         "ng add @angular/material"
        
-3.  Be sure to have the username and password for the database in the connection string for the dotenv file which is not included in the repo for 
-    security reasons.
-4.  Currently, to run the app, first run the server side using the command: 
+3.  You will need a MongoDB account and a Firebase account.
+    Be sure to have the username and password for the database in the connection string for the dotenv file which is not included in the repo for security reasons.
+    
+4.    Be sure to install Firebase Authentication using the command: 
+        "npm install @angular/fire firebase"
+    
+      Setup your Firebase authentication service and make changes to the "app.nodule.ts" as needed. 
+
+5.  To run the app, first run the server side using the command: 
         "npx ts-node src/server.ts"
     which will open on http://localhost:5200 
 
     Next run the client side using the commmand:
         "ng serve -o"
     which will open on http://localhost:4200
-
-
 
 
 # UpdateS 10/2/23
