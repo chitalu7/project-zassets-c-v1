@@ -11,9 +11,6 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  
-
-
   constructor(public authService: AuthenticationService, private router: Router){
 
   }
@@ -41,9 +38,3 @@ export class AppComponent {
 
  }
 
-
-  /*template: `
-    <div class="container-md">
-      <router-outlet></router-outlet>
-    </div>
-  `*/

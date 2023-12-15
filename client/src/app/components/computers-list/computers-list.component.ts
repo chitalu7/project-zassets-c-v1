@@ -6,6 +6,7 @@ import { ComputerService } from 'src/services/computer.service';
 @Component({
   selector: 'app-computers-list',
   template: `
+  <div class="main-container">
     <h2 class="text center m-5"> Asset List</h2>
     <table class="table table-striped table-bordered">
       <thead>
@@ -38,6 +39,7 @@ import { ComputerService } from 'src/services/computer.service';
     </table>
 
     <button class="btn btn-primary mt-3" routerLink="/computers/new">Add a New Asset</button>
+  </div>
      `
 })
 

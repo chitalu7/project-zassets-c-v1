@@ -10,6 +10,7 @@ import { MatPseudoCheckboxModule } from '@angular/material/core';
 @Component({
   selector: 'app-computer-form',
   template: `
+  <div class="main-container">
     <form class="computer-form" autocomplete="off" [formGroup]="computerForm" (ngSubmit)="submitForm()">
 
       <!--Asset Type Selection-->
@@ -109,6 +110,7 @@ import { MatPseudoCheckboxModule } from '@angular/material/core';
 
       <!--Computer location-->
       <div class="mb-3 px-5">
+      <b>Select Asset Location</b>
         <div class="form-check">
           <input class="form-check-input" type="radio" formControlName="location" name="location" id="location-mailroom" value="Mailroom" required>
           <label class="form-check-label" for="location-mailroom">Mailroom</label>
@@ -128,9 +130,10 @@ import { MatPseudoCheckboxModule } from '@angular/material/core';
       <button class="btn btn-primary" type="submit" [disabled]="computerForm.invalid">Add</button>
 
     </form>
+</div>
+
   `,
-  styles: [
-  ]
+  styleUrls: [ './computer-form.component.css']
 })
 
 export class ComputerFormComponent implements OnInit {
@@ -178,34 +181,3 @@ export class ComputerFormComponent implements OnInit {
 
 
 }
-
-
-
-// <!-- <div class="mb-3">
-// <div class="form-check">
-//   <input class="form-check-input"
-
-// </div>
-// </div> -->
-
-// <!-- <h4>mat-select</h4>
-// <mat-form-field>
-// <mat-label>Choose an option</mat-label>
-
-// <mat-list-option value="option1">Option 1</mat-list-option>
-// <mat-list-option value="=option2">Option 2</mat-list-option>
-// <mat-list-option value="option3">Option 3</mat-list-option>
-  
-// </mat-form-field> -->
-
-// <!-- <div class="form-floating mb-3">
-// <h4>mat-select</h4>
-// <mat-form-field>
-// <mat-label>Choose an option</mat-label>
-
-// <mat-list-option value="option1">Option 1</mat-list-option>
-// <mat-list-option value="=option2">Option 2</mat-list-option>
-// <mat-list-option value="option3">Option 3</mat-list-option>
-  
-// </mat-form-field>
-// </div> -->
